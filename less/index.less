@@ -54,6 +54,107 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	background-color: #0246A9;
+	font-size: 62.5%;
+
+}
+.flex {
+	display:flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+// The sidebar menu
+.sidebar {
+	.flex();
+	flex-direction:column;
+	align-items: center;
+  font-size: 7em;
+  height: 100%; 
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0; 
+  right: 0;
+  background-color: #001155;
+  color: #0246A9;
+  overflow-x: hidden;
+  padding-top: 20px;
+
+  a {
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	color: #818181;
+	display: block;
+		&:hover {
+		color: #f1f1f1;
+	  }
+  }
+  @media screen and (max-height: 450px) {
+	.sidebar {padding-top: 15px;}
+	.sidebar a {font-size: 18px;}
+  }  
+}
+
+// Style page content
+.main {
+  margin-right: 300px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+  
+
+}
+.text {
+	color: #0246A9;
+	background-color: #818181;
+	border-radius: 12px;
+}
+
+.header {
+	.flex();
+	flex-direction: column;
+	justify-content: space-evenly;
+	font-size: 4em;
+	width:98%;
+	h1 {
+		Font-size: 7em;
+		color: #0055fa;
+		background-color: #001155;
+		border-radius: 80px;
+	}
+	
+}
+
+.block {
+	.flex();
+	margin:5%;
+	
+	height:40%;
+	flex-direction: row;
+	justify-content: space-evenly;
+	.img {
+		width:50%;
+	}
+	p{
+		.text();
+	}
+}
+.skills {
+	.flex();
+	flex-direction: column;
+	font-size: 6em;
+	h2 {
+		font-size: 2em;
+		color: #0055fa;
+		background-color: #001155;
+		border-radius: 80%;
+	}
+	table {
+		width: 100%;
+		background-color: #f1f1c1;
+		th {padding-left: 10%;}
+		td {padding-left: 10%;}
+		
+	  }
 }
 
